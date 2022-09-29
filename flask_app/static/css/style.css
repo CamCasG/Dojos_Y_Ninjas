@@ -1,0 +1,60 @@
+*{
+    margin: 0px auto;
+}
+
+.container_1{
+    display: flex;
+}
+
+.crear_dojo{
+    margin-top: 100px;
+    margin-left: 300px;
+    border: 2px solid black;
+    width: 400px;
+    height: 250px;
+    padding: 10px;
+}
+
+.form_ninja{
+    width: 700px;
+    border: 2px solid black;
+    padding: 20px;
+    margin-top: 70px;
+    background-color: #81c9fa;
+}
+
+.lista_dojo{
+    margin-top: 80px;
+    margin-right: 500px;
+    border: 2px solid black;
+    width: 500px;
+    height: 500px;
+}
+
+#boton_crear{
+    height: 50px;
+    margin-top: 10px;
+}
+
+#boton_volver{
+    margin-left: 1230px;
+    margin-top: 30px;
+}
+
+li{
+    list-style: none;
+    margin-top: 7px;
+    font-size: 17px;
+}
+
+.tabla-dojos{
+    margin-left: 500px;
+    margin-top: 50px;
+    width: 800px;
+    border: 2px solid grey;
+}
+
+#boton_dojos_inicio{
+    margin-left: 500px;
+    margin-top: 10px;
+}

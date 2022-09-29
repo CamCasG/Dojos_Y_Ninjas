@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea un ninja</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="form_ninja">
+    <h2 class="text-center">Crea un Ninja</h2>
+    <form action="/ninjas/crear" method="POST"> 
+
+    <label for="exampleInputPassword1" class="form-label">Dojo:</label>
+    <select class="form-select" aria-label="Default select example" name="dojo_id">
+        <option selected>Selecciona tu Dojo:</option>
+        {% for dojo in dojo %}
+        <option value="{{dojo.id}}">{{dojo.nombre}}</option>
+        {% endfor %}
+    </select>
+
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Nombre:</label>
+    <input type="text" name="nombre" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Apellido:</label>
+    <input type="text" name="apellido" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <div class="mb-3">
+    <label for="exampleInputPassword1" class="form-label">Edad:</label>
+    <input type="number" name="edad" class="form-control" id="exampleInputPassword1">
+    </div>
+
+    <button type="submit" class="btn btn-secondary">Crear</button>
+    </form>
+    </div>
+
+    <a href="/" class="btn btn-dark" id="boton_volver">Inicio</a>
+</body>
+</html>
