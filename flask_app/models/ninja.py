@@ -16,6 +16,12 @@ class Ninja:
         query = "INSERT INTO ninjas (nombre,apellido,edad, dojo_id) VALUES (%(nombre)s,%(apellido)s,%(edad)s,%(dojo_id)s)"
         resultado = connectToMySQL('esquema_dojos_y_ninjas').query_db(query,data)
         return resultado
+    
+    @classmethod
+    def get_un_ninja(cls, data):
+        query = "SELECT * FROM ninjas WHERE id = %(id_ninja)s;"
+        resultado = connectToMySQL('esquema_dojos_y_ninjas').query_db(query,data)
+        return resultado[0]
 
 
     # No sé si requiera de esta función, puesto que no siento necesario tener que llamar a todos los ninjas en algún punto. De todas maneras lo cree por si lo llegara
