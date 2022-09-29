@@ -14,8 +14,9 @@ def dojos():
 @app.route('/dojos/crear', methods=['POST'])
 def crear_dojos():
     print(request.form)
-    Dojo.save(request.form)
-    return redirect('/dojos')
+    dojo_id = Dojo.save(request.form)
+
+    return redirect(f'/dojos/{dojo_id}')
 
 @app.route('/dojos/<int:id>')
 def mostrar_dojos(id):
